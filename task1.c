@@ -2,16 +2,14 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-
 int getNum(void)
 {
-    int num = 0;
-    char ch = 0;
-
+    int number = 0;
     while (true)
     {
-        int input = scanf_s("%d%c", &num, &ch);
-        if (input == 2 && ch == '\n' && num >= 0)
+        char symbol = 0;
+        int input = scanf_s("%d%c", &number, &symbol);
+        if (input == 2 && symbol == '\n' && number >= 0)
         {
             break;
         }
@@ -19,11 +17,10 @@ int getNum(void)
         {
             printf("\nInvalid input format\nTry again: ");
         }
-        while ((ch = getchar()) != '\n' && ch != EOF);
+        while ((symbol = getchar()) != '\n' && symbol != EOF);
     }
-    return num;
+    return number;
 }
-
 
 int main()
 {
@@ -49,6 +46,5 @@ int main()
             zeroCounter++;
         }
     }
-    printf("The number of zeros in the array: %d", zeroCounter);
+    printf("\nThe number of zeros in the array: %d", zeroCounter);
 }
-
