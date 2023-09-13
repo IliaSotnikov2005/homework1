@@ -46,5 +46,5 @@ int main()
             zeroCounter++;
         }
     }
-    printf("The number of zeros in the array: %d", zeroCounter);
+    printf("\nThe number of zeros in the array: %d", zeroCounter);
 }
